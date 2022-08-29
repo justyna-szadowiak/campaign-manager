@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-list>
+    <mat-card-title>Campaigns</mat-card-title>
+    <div class="button-container">
+      <button mat-fab (click)="createCampaign()" color="primary" aria-label="Icon button with add icon">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <mat-list-item *ngFor="let res of campaigns">
+      <div mat-line>{{res.name}}</div>
+      <!-- <button (click)="updateCampaign()" mat-mini-fab color="primary" aria-label="Icon button with a edit icon">
+        <a routerLink="edit/{{campaign.id}}"></a>
+        <mat-icon>edit</mat-icon>
+      </button> -->
+      <button (click)="deleteCampaign()" mat-mini-fab color="primary" aria-label="Icon button with a delete icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
