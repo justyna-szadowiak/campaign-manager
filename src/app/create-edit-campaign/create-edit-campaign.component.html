@@ -1,0 +1,77 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="campaignForm" class="form" novalidate>
+    <div class="full-width form-group">
+      <mat-form-field appearance="fill">
+        <input
+          matInput
+          type="text"
+          placeholder="Enter a campaign title"
+          formControlName="name"
+          [errorStateMatcher]="titleMatch"
+          required
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label class="label">Enter keywords:</mat-label>
+
+        <mat-chip-list #chipList aria-label="Keywords selection">
+          <mat-chip
+            *ngFor="let keyword of keywords"
+            (removed)="remove(keyword)">
+            {{keyword}}
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-chip>
+          <input
+            placeholder="Enter keyword..."
+            #keywordInput
+            [formControl]="keyword"
+            [matAutocomplete]="auto"
+            [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeyCodes"
+            (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+          <mat-option *ngFor="let keyword of filteredKeywords | async" [value]="keyword">
+            {{keyword}}
+          </mat-option>
+        </mat-autocomplete>
+
+        <input
+          matInput
+          type="text"
+          formControlName="keyword"
+          required
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label class="label">Bid amount:</mat-label>
+        <input matInput type="number" formControlName="bid" [min]="0.5" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label class="label">Campaign fund:</mat-label>
+        <input matInput type="number" formControlName="fund" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label class="label">Status</mat-label>
+          <select matNativeControl formControlName="status" [(ngModel)]="status">
+            <option value=""></option>
+            <option value="on">On</option>
+            <option value="off">Off</option>
+          </select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label class="label">Choose town</mat-label>
+        <mat-select matNativeControl formControlName="town" *ngIf="(towns$ | async) as towns" required >
+          <mat-option *ngFor="let town of towns" [value]="town.id ">{{town.town}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label class="label">Radius (km)</mat-label>
+        <input matInput [(ngModel)]="radius" type="number" formControlName="radius" [min]="1">
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+
