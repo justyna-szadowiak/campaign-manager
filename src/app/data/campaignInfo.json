@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "The best roasted coffee beans",
+    "keyword": "roasted beans"
+  },
+  {
+    "id": 2,
+    "name": "Coffee beans with chocolate taste",
+    "keyword": "chocolate"
+  },
+  {
+    "id": 3,
+    "name": "Powder coffee with peanut taste",
+    "keyword": "great taste"
+  },
+  {
+    "id": 4,
+    "name": "Freshly roasted coffee beans",
+    "keyword": "freshly roasted"
+  },
+  {
+    "id": 5,
+    "name": "Freshly roasted espresso coffee",
+    "keyword": "espresso"
+  },
+  {
+    "id": 6,
+    "name": "Arrabica in coffee beans",
+    "keyword": "coffee"
+  },
+  {
+    "id": 7,
+    "name": "Green yerba mate with rose petals",
+    "keyword": "tea"
+  },
+  {
+    "id": 8,
+    "name": "Yerba mate with mint, and apple taste",
+    "keyword": "yerba mate"
+  },
+  {
+    "id": 9,
+    "name": "Yerba mate with dragon fruit taste",
+    "keyword": "fruit taste"
+  },
+  {
+    "id": 10,
+    "name": "Eco freshly roasted mexican coffee beans",
+    "keyword": "ecofriendly"
+  }
+]
