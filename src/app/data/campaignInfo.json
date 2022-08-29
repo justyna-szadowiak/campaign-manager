@@ -2,51 +2,101 @@
   {
     "id": 1,
     "name": "The best roasted coffee beans",
-    "keyword": "roasted beans"
+    "keyword": "roasted beans",
+    "bid": 0.5,
+    "fund": 9,
+    "status": "On",
+    "town": "Prague",
+    "radius": "3"
   },
   {
     "id": 2,
     "name": "Coffee beans with chocolate taste",
-    "keyword": "chocolate"
+    "keyword": "chocolate",
+    "bid": 2.5,
+    "fund": 3,
+    "status": "On",
+    "town": "Gdynia",
+    "radius": "5"
   },
   {
     "id": 3,
     "name": "Powder coffee with peanut taste",
-    "keyword": "great taste"
+    "keyword": "great taste",
+    "bid": 0.5,
+    "fund": 4,
+    "status": "On",
+    "town": "Zakopane",
+    "radius": "4"
   },
   {
     "id": 4,
     "name": "Freshly roasted coffee beans",
-    "keyword": "freshly roasted"
+    "keyword": "freshly roasted",
+    "bid": 1.5,
+    "fund": 2,
+    "status": "On",
+    "town": "Kraków",
+    "radius": "1"
   },
   {
     "id": 5,
     "name": "Freshly roasted espresso coffee",
-    "keyword": "espresso"
+    "keyword": "espresso",
+    "bid": 2.5,
+    "fund": 10,
+    "status": "On",
+    "town": "Berlin",
+    "radius": "5"
   },
   {
     "id": 6,
     "name": "Arrabica in coffee beans",
-    "keyword": "coffee"
+    "keyword": "coffee",
+    "bid": 3.5,
+    "fund": 7,
+    "status": "On",
+    "town": "Wrocław",
+    "radius": "2"
   },
   {
     "id": 7,
     "name": "Green yerba mate with rose petals",
-    "keyword": "tea"
+    "keyword": "tea",
+    "bid": 0.5,
+    "fund": 3,
+    "status": "On",
+    "town": "Berlin",
+    "radius": "6"
   },
   {
     "id": 8,
     "name": "Yerba mate with mint, and apple taste",
-    "keyword": "yerba mate"
+    "keyword": "yerba mate",
+    "bid": 1.5,
+    "fund": 5,
+    "status": "On",
+    "town": "Prague",
+    "radius": "8"
   },
   {
     "id": 9,
     "name": "Yerba mate with dragon fruit taste",
-    "keyword": "fruit taste"
+    "keyword": "fruit taste",
+    "bid": 1.5,
+    "fund": 9,
+    "status": "On",
+    "town": "Talin",
+    "radius": "4"
   },
   {
     "id": 10,
     "name": "Eco freshly roasted mexican coffee beans",
-    "keyword": "ecofriendly"
+    "keyword": "ecofriendly",
+    "bid": 0.5,
+    "fund": 1,
+    "status": "On",
+    "town": "Lublin",
+    "radius": "10"
   }
 ]

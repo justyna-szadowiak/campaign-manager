@@ -1,34 +1,10 @@
 [
-  {
-    "id": 1,
-    "town": "Prague"
-  },
-  {
-    "id": 2,
-    "town": "Berlin"
-  },
-  {
-    "id": 3,
-    "town": "Kraków"
-  },
-  {
-    "id": 4,
-    "town": "Talin"
-  },
-  {
-    "id": 5,
-    "town": "Wrocław"
-  },
-  {
-    "id": 6,
-    "town": "Lublin"
-  },
-  {
-    "id": 7,
-    "town": "Gdynia"
-  },
-  {
-    "id": 8,
-    "town": "Zakopane"
-  }
+  "Prague",
+  "Berlin",
+  "Kraków",
+  "Talin",
+  "Wrocław",
+  "Lublin",
+  "Gdynia",
+  "Zakopane"
 ]
