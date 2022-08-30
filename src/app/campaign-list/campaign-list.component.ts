@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Campaign, CampaignName } from '../interfaces';
 import { ApiService } from '../service/api.service';
 import {MatDialog} from '@angular/material/dialog';
@@ -11,6 +11,7 @@ import { CreateEditCampaignComponent } from '../create-edit-campaign/create-edit
 })
 export class CampaignListComponent implements OnInit {
   public campaigns: CampaignName[] | undefined;
+  public currentCampaign: Campaign | undefined;
 
   constructor(
     public API: ApiService,
@@ -24,11 +25,20 @@ export class CampaignListComponent implements OnInit {
     })
   }
 
-  createCampaign(){
-    let newCampaign = this.dialog.open(CreateEditCampaignComponent);
+  updateCampaign(id: number){
+    const dialogRefUpdate = this.dialog.open(CreateEditCampaignComponent, {
+      data: id,
+      width: '600px'
+    });
+  }
 
-    newCampaign.afterClosed().subscribe(result => {
-      this.campaigns?.push(result.name)
+  createCampaign(){
+    const dialogRefCreate = this.dialog.open(CreateEditCampaignComponent, {
+      data: this.currentCampaign,
+      width: '600px'
+    });
+
+    dialogRefCreate.afterClosed().subscribe(() => {
     })
   }
 
