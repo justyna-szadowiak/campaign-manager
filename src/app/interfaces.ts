@@ -1,22 +1,14 @@
-export interface Town {
-  id: number;
-  town: string;
-}
-
 export interface CampaignName {
   id: number;
   name: string;
 }
 
-export interface CampaignInfo extends CampaignName {
-  keyword: string
-}
-
-export interface Campaign extends CampaignName, Town {
+export interface Campaign extends CampaignName {
   keyword: string;
-  bid_amount: number;
+  bid: number;
   fund: number;
-  status: string;
+  status: boolean;
+  town: string;
   radius: number;
 }
 

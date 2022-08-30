@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient  } from '@angular/common/http';
-import { Campaign, CampaignName, Keyword, Town } from '../interfaces';
+import { Campaign, CampaignName } from '../interfaces';
 import campaigns from '../data/campaigns.json';
 import towns from '../data/towns.json';
-import keywords from '../data/keywords.json'
+import keywords from '../data/keywords.json';
+import campaignInfo from '../data/campaignInfo.json';
 import { environment } from 'src/environments/environment';
 
-const baseUrl = `${environment.apiURL}/campaign`;
+const baseUrl = `${environment.apiURL}`;
 
 @Injectable({
   providedIn: 'root'
@@ -19,19 +20,15 @@ export class ApiService {
     return of(campaigns)
   }
 
-  public saveCampaign(params: Campaign) {
-    return this.http.post(baseUrl, params)
+  public getCampaignById(id: number): Observable<Campaign> {
+    return of(campaignInfo.find(campaignInfo => campaignInfo.id === id) as Campaign)
   }
 
-  public updateCampaign(id: number, params: Campaign) {
-    return this.http.put(`${baseUrl}/${id}`, params)
-  }
-
-  public getTowns(): Observable<Town[]> {
+  public getTowns(): Observable<string[]> {
     return of(towns)
   }
 
-  public getKeywords(): Observable<Keyword[]> {
+  public getKeywords(): Observable<string[]> {
     return of(keywords)
   }
 }

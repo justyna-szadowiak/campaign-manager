@@ -5,9 +5,9 @@
     "keyword": "roasted beans",
     "bid": 0.5,
     "fund": 9,
-    "status": "On",
+    "status": true,
     "town": "Prague",
-    "radius": "3"
+    "radius": 3
   },
   {
     "id": 2,
@@ -15,9 +15,9 @@
     "keyword": "chocolate",
     "bid": 2.5,
     "fund": 3,
-    "status": "On",
+    "status": true,
     "town": "Gdynia",
-    "radius": "5"
+    "radius": 5
   },
   {
     "id": 3,
@@ -25,9 +25,9 @@
     "keyword": "great taste",
     "bid": 0.5,
     "fund": 4,
-    "status": "On",
+    "status": true,
     "town": "Zakopane",
-    "radius": "4"
+    "radius": 4
   },
   {
     "id": 4,
@@ -35,9 +35,9 @@
     "keyword": "freshly roasted",
     "bid": 1.5,
     "fund": 2,
-    "status": "On",
+    "status": true,
     "town": "Kraków",
-    "radius": "1"
+    "radius": 1
   },
   {
     "id": 5,
@@ -45,9 +45,9 @@
     "keyword": "espresso",
     "bid": 2.5,
     "fund": 10,
-    "status": "On",
+    "status": true,
     "town": "Berlin",
-    "radius": "5"
+    "radius": 5
   },
   {
     "id": 6,
@@ -55,9 +55,9 @@
     "keyword": "coffee",
     "bid": 3.5,
     "fund": 7,
-    "status": "On",
+    "status": true,
     "town": "Wrocław",
-    "radius": "2"
+    "radius": 2
   },
   {
     "id": 7,
@@ -65,9 +65,9 @@
     "keyword": "tea",
     "bid": 0.5,
     "fund": 3,
-    "status": "On",
+    "status": true,
     "town": "Berlin",
-    "radius": "6"
+    "radius": 6
   },
   {
     "id": 8,
@@ -75,9 +75,9 @@
     "keyword": "yerba mate",
     "bid": 1.5,
     "fund": 5,
-    "status": "On",
+    "status": true,
     "town": "Prague",
-    "radius": "8"
+    "radius": 8
   },
   {
     "id": 9,
@@ -85,9 +85,9 @@
     "keyword": "fruit taste",
     "bid": 1.5,
     "fund": 9,
-    "status": "On",
+    "status": true,
     "town": "Talin",
-    "radius": "4"
+    "radius": 4
   },
   {
     "id": 10,
@@ -95,8 +95,8 @@
     "keyword": "ecofriendly",
     "bid": 0.5,
     "fund": 1,
-    "status": "On",
+    "status": true,
     "town": "Lublin",
-    "radius": "10"
+    "radius": 1
   }
 ]
