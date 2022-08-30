@@ -1,3 +1,5 @@
+<pre>{{(campaigns$ | async | json)}}</pre>
+
 <mat-card>
   <mat-list>
     <mat-card-title>Campaigns</mat-card-title>
@@ -6,12 +8,12 @@
         <mat-icon>add</mat-icon>
       </button>
     </div>
-    <mat-list-item *ngFor="let campaign of campaigns">
+    <mat-list-item *ngFor="let campaign of (campaigns$.asObservable() | async); let i = index">
       <div mat-line>{{campaign.name}}</div>
-      <button (click)="updateCampaign(campaign.id)" mat-mini-fab color="primary" aria-label="Icon button with a edit icon">
+      <button (click)="updateCampaign(campaign, i)" mat-mini-fab color="primary" aria-label="Icon button with a edit icon">
         <mat-icon>edit</mat-icon>
       </button>
-      <button (click)="deleteCampaign()" mat-mini-fab color="primary" aria-label="Icon button with a delete icon">
+      <button (click)="deleteCampaign(campaign.id)" mat-mini-fab color="primary" aria-label="Icon button with a delete icon">
         <mat-icon>delete</mat-icon>
       </button>
     </mat-list-item>
