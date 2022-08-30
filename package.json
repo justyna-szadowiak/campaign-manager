@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postinstall": "ng build --aot -prod"
+    "heroku-postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -30,8 +30,6 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular/cli": "^14.2.1",
-    "@angular/compiler-cli": "~13.2.0",
     "@angular-devkit/build-angular": "~13.2.6",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
