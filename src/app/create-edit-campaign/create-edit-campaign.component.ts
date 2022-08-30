@@ -1,6 +1,6 @@
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import { Component, OnInit, ElementRef, ViewChild, Inject } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, UntypedFormBuilder } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { Observable } from 'rxjs';
 import {map, switchMap, startWith, tap} from 'rxjs/operators';
@@ -18,14 +18,14 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class CreateEditCampaignComponent implements OnInit {
   public campaign$!: Observable<Campaign>;
-  public campaignForm: FormGroup = this.formBuilder.group({
-    name: new FormControl(''),
-    keyword: new FormControl(''),
-    bid: new FormControl(0.5),
-    fund: new FormControl(''),
-    status: new FormControl(),
-    town: new FormControl(),
-    radius: new FormControl()
+  public campaignForm: UntypedFormGroup = this.formBuilder.group({
+    name: new UntypedFormControl(''),
+    keyword: new UntypedFormControl(''),
+    bid: new UntypedFormControl(0.5),
+    fund: new UntypedFormControl(''),
+    status: new UntypedFormControl(),
+    town: new UntypedFormControl(),
+    radius: new UntypedFormControl()
   });;
   public towns$: Observable<string[]>;
   public status: boolean = true;
@@ -33,10 +33,10 @@ export class CreateEditCampaignComponent implements OnInit {
   public isAddMode!: boolean;
   public loading: boolean | undefined;
   public separatorKeyCodes: number[]= [ENTER, COMMA]
-  public keyword = new FormControl('');
+  public keyword = new UntypedFormControl('');
   public filteredKeywords$!: Observable<string[]>;
   public keywords: string[] = ['coffee'];
-  private userKeyword: string | null = null
+  private userKeyword!: string;
 
   @ViewChild('keywordInput')
   keywordInput!: ElementRef<HTMLInputElement>;
@@ -44,7 +44,7 @@ export class CreateEditCampaignComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<CreateEditCampaignComponent>,
     @Inject(MAT_DIALOG_DATA) campaign: Campaign,
-    public formBuilder: FormBuilder,
+    public formBuilder: UntypedFormBuilder,
     public API: ApiService,
     public AlertAPI: AlertsService) {
       this.campaignForm.patchValue(campaign);
