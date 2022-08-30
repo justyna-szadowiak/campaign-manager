@@ -1,9 +1,6 @@
-export interface CampaignName {
+export interface Campaign {
   id: number;
   name: string;
-}
-
-export interface Campaign extends CampaignName {
   keyword: string;
   bid: number;
   fund: number;

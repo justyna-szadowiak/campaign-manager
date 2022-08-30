@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient  } from '@angular/common/http';
-import { Campaign, CampaignName } from '../interfaces';
-import campaigns from '../data/campaigns.json';
+import { Campaign } from '../interfaces';
 import towns from '../data/towns.json';
 import keywords from '../data/keywords.json';
 import campaignInfo from '../data/campaignInfo.json';
@@ -16,8 +15,8 @@ const baseUrl = `${environment.apiURL}`;
 export class ApiService {
   constructor(private http: HttpClient) { }
 
-  public getCampaigns(): Observable<CampaignName[]> {
-    return of(campaigns)
+  public getCampaigns(): Observable<Campaign[]> {
+    return of(campaignInfo)
   }
 
   public getCampaignById(id: number): Observable<Campaign> {
