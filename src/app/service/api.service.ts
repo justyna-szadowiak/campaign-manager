@@ -10,7 +10,7 @@ import campaignInfo from '../data/campaignInfo.json';
   providedIn: 'root'
 })
 export class ApiService {
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   public getCampaigns(): Observable<Campaign[]> {
     return of(campaignInfo)
