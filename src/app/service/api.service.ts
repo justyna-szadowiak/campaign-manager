@@ -5,9 +5,6 @@ import { Campaign } from '../interfaces';
 import towns from '../data/towns.json';
 import keywords from '../data/keywords.json';
 import campaignInfo from '../data/campaignInfo.json';
-import { environment } from 'src/environments/environment';
-
-const baseUrl = `${environment.apiURL}`;
 
 @Injectable({
   providedIn: 'root'
