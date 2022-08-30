@@ -15,7 +15,7 @@
         <mat-chip-list #chipList aria-label="Keywords selection">
           <mat-chip
             *ngFor="let keyword of keywords"
-            (removed)="remove(keyword)">
+            (removed)="removeChip(keyword)">
             {{keyword}}
             <button matChipRemove>
               <mat-icon>cancel</mat-icon>
@@ -28,9 +28,9 @@
             [matAutocomplete]="auto"
             [matChipInputFor]="chipList"
             [matChipInputSeparatorKeyCodes]="separatorKeyCodes"
-            (matChipInputTokenEnd)="add($event)">
+            (matChipInputTokenEnd)="addChip($event)">
         </mat-chip-list>
-        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectedKeyword($event)">
           <mat-option *ngFor="let keyword of filteredKeywords$ | async" [value]="keyword">
             {{keyword}}
           </mat-option>
@@ -59,17 +59,14 @@
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label class="label">Radius (km)</mat-label>
-        <input matInput [(ngModel)]="radius" type="number" formControlName="radius" [min]="1">
+        <input matInput type="number" formControlName="radius" [min]="1">
       </mat-form-field>
     </div>
     <mat-card-action>
-      <button [disabled]="loading" mat-raised-button color="primary">
+      <button [disabled]="loading" [mat-dialog-close]="campaignForm.value" mat-raised-button color="primary">
         <span  *ngIf="loading"></span>
         Save
       </button>
     </mat-card-action>
   </form>
 </div>
-
-<pre>{{campaign$ | async | json}}</pre>
-
